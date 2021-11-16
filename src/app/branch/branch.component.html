@@ -1,0 +1,26 @@
+<body>
+<p>We serve in these locations!!!</p>
+<div class="search">
+    Search here: <input type="text" name="search" [(ngModel)]="query" placeholder="Enter City/Town Name">
+</div><br>
+  
+  <table>
+    
+      <th>City</th>
+      <th>Town</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Phone No.</th>
+    
+      <tr *ngFor="let data of places | searchFilter: query">
+        <td>{{data.city}}</td>
+        <td>{{data.town}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.phone}}</td>
+      </tr>
+    
+</table>
+<br><br><br><br>
+
+</body>
